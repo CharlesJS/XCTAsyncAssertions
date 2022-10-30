@@ -1,25 +1,24 @@
 //
 //  XCTAsyncAssertionsTests.swift
 //  Well now, isn't this meta.
-//  
+//
 //
 //  Created by Charles Srstka on 6/19/22.
 //
 
-import XCTest
 import XCTAsyncAssertions
+import XCTest
 
 class XCTAsyncAssertionsTests: XCTestCase {
-    private func expectFailure(_ reason: String, file: String = #filePath, line: UInt = #line, lineOffset: UInt = 1) {
-        XCTExpectFailure() { failure in
+    private func expectFailure(
+        _ reason: String, file: String = #filePath, line: UInt = #line, lineOffset: UInt = 1
+    ) {
+        XCTExpectFailure { failure in
             guard let location = failure.sourceCodeContext.location else { return false }
 
-            return (
-                failure.type == .assertionFailure &&
-                failure.compactDescription == reason &&
-                location.fileURL.path == file &&
-                location.lineNumber == line + lineOffset
-            )
+            return
+                (failure.type == .assertionFailure && failure.compactDescription == reason
+                && location.fileURL.path == file && location.lineNumber == line + lineOffset)
         }
     }
 
@@ -40,13 +39,16 @@ class XCTAsyncAssertionsTests: XCTestCase {
         self.expectFailure("XCTAssertEqual failed: (\"Foo\") is not equal to (\"Bar\")")
         await XCTAssertEqualAsync("Foo", "Bar")
 
-        self.expectFailure("XCTAssertEqualWithAccuracy failed: (\"1.23\") is not equal to (\"2.34\") +/- (\"0.01\")")
+        self.expectFailure(
+            "XCTAssertEqualWithAccuracy failed: (\"1.23\") is not equal to (\"2.34\") +/- (\"0.01\")")
         await XCTAssertEqualAsync(1.23, 2.34, accuracy: 0.01)
 
-        self.expectFailure("XCTAssertEqualWithAccuracy failed: (\"1.23\") is not equal to (\"1.231\") +/- (\"0.001\")")
+        self.expectFailure(
+            "XCTAssertEqualWithAccuracy failed: (\"1.23\") is not equal to (\"1.231\") +/- (\"0.001\")")
         await XCTAssertEqualAsync(1.23, 1.231, accuracy: 0.001)
 
-        self.expectFailure("XCTAssertEqualWithAccuracy failed: (\"123\") is not equal to (\"125\") +/- (\"1\")")
+        self.expectFailure(
+            "XCTAssertEqualWithAccuracy failed: (\"123\") is not equal to (\"125\") +/- (\"1\")")
         await XCTAssertEqualAsync(123, 125, accuracy: 1)
     }
 
@@ -133,16 +135,20 @@ class XCTAsyncAssertionsTests: XCTestCase {
         self.expectFailure("XCTAssertNotEqual failed: (\"Foo\") is equal to (\"Foo\")")
         await XCTAssertNotEqualAsync("Foo", "Foo")
 
-        self.expectFailure("XCTAssertNotEqualWithAccuracy failed: (\"1.23\") is equal to (\"1.23\") +/- (\"0.01\")")
+        self.expectFailure(
+            "XCTAssertNotEqualWithAccuracy failed: (\"1.23\") is equal to (\"1.23\") +/- (\"0.01\")")
         await XCTAssertNotEqualAsync(1.23, 1.23, accuracy: 0.01)
 
-        self.expectFailure("XCTAssertNotEqualWithAccuracy failed: (\"1.23\") is equal to (\"1.231\") +/- (\"0.01\")")
+        self.expectFailure(
+            "XCTAssertNotEqualWithAccuracy failed: (\"1.23\") is equal to (\"1.231\") +/- (\"0.01\")")
         await XCTAssertNotEqualAsync(1.23, 1.231, accuracy: 0.01)
 
-        self.expectFailure("XCTAssertNotEqualWithAccuracy failed: (\"123\") is equal to (\"123\") +/- (\"1\")")
+        self.expectFailure(
+            "XCTAssertNotEqualWithAccuracy failed: (\"123\") is equal to (\"123\") +/- (\"1\")")
         await XCTAssertNotEqualAsync(123 as Int, 123 as Int, accuracy: 1)
 
-        self.expectFailure("XCTAssertNotEqualWithAccuracy failed: (\"123\") is equal to (\"124\") +/- (\"1\")")
+        self.expectFailure(
+            "XCTAssertNotEqualWithAccuracy failed: (\"123\") is equal to (\"124\") +/- (\"1\")")
         await XCTAssertNotEqualAsync(123 as Int, 124 as Int, accuracy: 1)
     }
 

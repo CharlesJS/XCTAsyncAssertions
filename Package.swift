@@ -15,7 +15,7 @@ let package = Package(
         .library(
             name: "XCTAsyncAssertions",
             targets: ["XCTAsyncAssertions"]
-        ),
+        )
     ],
     dependencies: [],
     targets: [
