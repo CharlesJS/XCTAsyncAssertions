@@ -8,8 +8,8 @@ import XCTest
 ///   - file: The file where the failure occurs. The default is the filename of the test case where you call this function.
 ///   - line: The line number where the failure occurs. The default is the line number where you call this function.
 public func XCTAssertAsync(
-    _ expression: @escaping @autoclosure () async throws -> Bool,
-    _ message: @escaping @autoclosure () async -> String = "",
+    _ expression: @autoclosure () async throws -> Bool,
+    _ message: @autoclosure () async -> String = "",
     file: StaticString = #filePath,
     line: UInt = #line
 ) async {
@@ -31,9 +31,9 @@ public func XCTAssertAsync(
 ///   - file: The file where the failure occurs. The default is the filename of the test case where you call this function.
 ///   - line: The line number where the failure occurs. The default is the line number where you call this function.
 public func XCTAssertEqualAsync<T: Equatable>(
-    _ expression1: @escaping @autoclosure () async throws -> T,
-    _ expression2: @escaping @autoclosure () async throws -> T,
-    _ message: @escaping @autoclosure () async -> String = "",
+    _ expression1: @autoclosure () async throws -> T,
+    _ expression2: @autoclosure () async throws -> T,
+    _ message: @autoclosure () async -> String = "",
     file: StaticString = #filePath,
     line: UInt = #line
 ) async {
@@ -58,10 +58,10 @@ public func XCTAssertEqualAsync<T: Equatable>(
 ///   - file: The file where the failure occurs. The default is the filename of the test case where you call this function.
 ///   - line: The line number where the failure occurs. The default is the line number where you call this function.
 public func XCTAssertEqualAsync<T: FloatingPoint>(
-    _ expression1: @escaping @autoclosure () async throws -> T,
-    _ expression2: @escaping @autoclosure () async throws -> T,
+    _ expression1: @autoclosure () async throws -> T,
+    _ expression2: @autoclosure () async throws -> T,
     accuracy: T,
-    _ message: @escaping @autoclosure () async -> String = "",
+    _ message: @autoclosure () async -> String = "",
     file: StaticString = #filePath,
     line: UInt = #line
 ) async {
@@ -87,10 +87,10 @@ public func XCTAssertEqualAsync<T: FloatingPoint>(
 ///   - file: The file where the failure occurs. The default is the filename of the test case where you call this function.
 ///   - line: The line number where the failure occurs. The default is the line number where you call this function.
 public func XCTAssertEqualAsync<T: Numeric>(
-    _ expression1: @escaping @autoclosure () async throws -> T,
-    _ expression2: @escaping @autoclosure () async throws -> T,
+    _ expression1: @autoclosure () async throws -> T,
+    _ expression2: @autoclosure () async throws -> T,
     accuracy: T,
-    _ message: @escaping @autoclosure () async -> String = "",
+    _ message: @autoclosure () async -> String = "",
     file: StaticString = #filePath,
     line: UInt = #line
 ) async {
@@ -113,8 +113,8 @@ public func XCTAssertEqualAsync<T: Numeric>(
 ///   - file: The file where the failure occurs. The default is the filename of the test case where you call this function.
 ///   - line: The line number where the failure occurs. The default is the line number where you call this function.
 public func XCTAssertFalseAsync(
-    _ expression: @escaping @autoclosure () async throws -> Bool,
-    _ message: @escaping @autoclosure () async -> String = "",
+    _ expression: @autoclosure () async throws -> Bool,
+    _ message: @autoclosure () async -> String = "",
     file: StaticString = #filePath,
     line: UInt = #line
 ) async {
@@ -136,9 +136,9 @@ public func XCTAssertFalseAsync(
 ///   - file: The file where the failure occurs. The default is the filename of the test case where you call this function.
 ///   - line: The line number where the failure occurs. The default is the line number where you call this function.
 public func XCTAssertGreaterThanAsync<T: Comparable>(
-    _ expression1: @escaping @autoclosure () async throws -> T,
-    _ expression2: @escaping @autoclosure () async throws -> T,
-    _ message: @escaping @autoclosure () async -> String = "",
+    _ expression1: @autoclosure () async throws -> T,
+    _ expression2: @autoclosure () async throws -> T,
+    _ message: @autoclosure () async -> String = "",
     file: StaticString = #filePath,
     line: UInt = #line
 ) async {
@@ -161,9 +161,9 @@ public func XCTAssertGreaterThanAsync<T: Comparable>(
 ///   - file: The file where the failure occurs. The default is the filename of the test case where you call this function.
 ///   - line: The line number where the failure occurs. The default is the line number where you call this function.
 public func XCTAssertGreaterThanOrEqualAsync<T: Comparable>(
-    _ expression1: @escaping @autoclosure () async throws -> T,
-    _ expression2: @escaping @autoclosure () async throws -> T,
-    _ message: @escaping @autoclosure () async -> String = "",
+    _ expression1: @autoclosure () async throws -> T,
+    _ expression2: @autoclosure () async throws -> T,
+    _ message: @autoclosure () async -> String = "",
     file: StaticString = #filePath,
     line: UInt = #line
 ) async {
@@ -186,9 +186,9 @@ public func XCTAssertGreaterThanOrEqualAsync<T: Comparable>(
 ///   - file: The file where the failure occurs. The default is the filename of the test case where you call this function.
 ///   - line: The line number where the failure occurs. The default is the line number where you call this function.
 public func XCTAssertIdenticalAsync(
-    _ expression1: @escaping @autoclosure () async throws -> AnyObject?,
-    _ expression2: @escaping @autoclosure () async throws -> AnyObject?,
-    _ message: @escaping @autoclosure () async -> String = "",
+    _ expression1: @autoclosure () async throws -> AnyObject?,
+    _ expression2: @autoclosure () async throws -> AnyObject?,
+    _ message: @autoclosure () async -> String = "",
     file: StaticString = #filePath,
     line: UInt = #line
 ) async {
@@ -211,9 +211,9 @@ public func XCTAssertIdenticalAsync(
 ///   - file: The file where the failure occurs. The default is the filename of the test case where you call this function.
 ///   - line: The line number where the failure occurs. The default is the line number where you call this function.
 public func XCTAssertLessThanAsync<T: Comparable>(
-    _ expression1: @escaping @autoclosure () async throws -> T,
-    _ expression2: @escaping @autoclosure () async throws -> T,
-    _ message: @escaping @autoclosure () async -> String = "",
+    _ expression1: @autoclosure () async throws -> T,
+    _ expression2: @autoclosure () async throws -> T,
+    _ message: @autoclosure () async -> String = "",
     file: StaticString = #filePath,
     line: UInt = #line
 ) async {
@@ -236,9 +236,9 @@ public func XCTAssertLessThanAsync<T: Comparable>(
 ///   - file: The file where the failure occurs. The default is the filename of the test case where you call this function.
 ///   - line: The line number where the failure occurs. The default is the line number where you call this function.
 public func XCTAssertLessThanOrEqualAsync<T: Comparable>(
-    _ expression1: @escaping @autoclosure () async throws -> T,
-    _ expression2: @escaping @autoclosure () async throws -> T,
-    _ message: @escaping @autoclosure () async -> String = "",
+    _ expression1: @autoclosure () async throws -> T,
+    _ expression2: @autoclosure () async throws -> T,
+    _ message: @autoclosure () async -> String = "",
     file: StaticString = #filePath,
     line: UInt = #line
 ) async {
@@ -260,8 +260,8 @@ public func XCTAssertLessThanOrEqualAsync<T: Comparable>(
 ///   - file: The file where the failure occurs. The default is the filename of the test case where you call this function.
 ///   - line: The line number where the failure occurs. The default is the line number where you call this function.
 public func XCTAssertNilAsync(
-    _ expression: @escaping @autoclosure () async throws -> Any?,
-    _ message: @escaping @autoclosure () async -> String = "",
+    _ expression: @autoclosure () async throws -> Any?,
+    _ message: @autoclosure () async -> String = "",
     file: StaticString = #filePath,
     line: UInt = #line
 ) async {
@@ -282,8 +282,8 @@ public func XCTAssertNilAsync(
 ///   - file: The file where the failure occurs. The default is the filename of the test case where you call this function.
 ///   - line: The line number where the failure occurs. The default is the line number where you call this function.
 public func XCTAssertNoThrowAsync<T>(
-    _ expression: @escaping @autoclosure () async throws -> T,
-    _ message: @escaping @autoclosure () async -> String = "",
+    _ expression: @autoclosure () async throws -> T,
+    _ message: @autoclosure () async -> String = "",
     file: StaticString = #filePath,
     line: UInt = #line
 ) async {
@@ -305,9 +305,9 @@ public func XCTAssertNoThrowAsync<T>(
 ///   - file: The file where the failure occurs. The default is the filename of the test case where you call this function.
 ///   - line: The line number where the failure occurs. The default is the line number where you call this function.
 public func XCTAssertNotEqualAsync<T: Equatable>(
-    _ expression1: @escaping @autoclosure () async throws -> T,
-    _ expression2: @escaping @autoclosure () async throws -> T,
-    _ message: @escaping @autoclosure () async -> String = "",
+    _ expression1: @autoclosure () async throws -> T,
+    _ expression2: @autoclosure () async throws -> T,
+    _ message: @autoclosure () async -> String = "",
     file: StaticString = #filePath,
     line: UInt = #line
 ) async {
@@ -332,10 +332,10 @@ public func XCTAssertNotEqualAsync<T: Equatable>(
 ///   - file: The file where the failure occurs. The default is the filename of the test case where you call this function.
 ///   - line: The line number where the failure occurs. The default is the line number where you call this function.
 public func XCTAssertNotEqualAsync<T: FloatingPoint>(
-    _ expression1: @escaping @autoclosure () async throws -> T,
-    _ expression2: @escaping @autoclosure () async throws -> T,
+    _ expression1: @autoclosure () async throws -> T,
+    _ expression2: @autoclosure () async throws -> T,
     accuracy: T,
-    _ message: @escaping @autoclosure () async -> String = "",
+    _ message: @autoclosure () async -> String = "",
     file: StaticString = #filePath,
     line: UInt = #line
 ) async {
@@ -361,10 +361,10 @@ public func XCTAssertNotEqualAsync<T: FloatingPoint>(
 ///   - file: The file where the failure occurs. The default is the filename of the test case where you call this function.
 ///   - line: The line number where the failure occurs. The default is the line number where you call this function.
 public func XCTAssertNotEqualAsync<T: Numeric>(
-    _ expression1: @escaping @autoclosure () async throws -> T,
-    _ expression2: @escaping @autoclosure () async throws -> T,
+    _ expression1: @autoclosure () async throws -> T,
+    _ expression2: @autoclosure () async throws -> T,
     accuracy: T,
-    _ message: @escaping @autoclosure () async -> String = "",
+    _ message: @autoclosure () async -> String = "",
     file: StaticString = #filePath,
     line: UInt = #line
 ) async {
@@ -388,9 +388,9 @@ public func XCTAssertNotEqualAsync<T: Numeric>(
 ///   - file: The file where the failure occurs. The default is the filename of the test case where you call this function.
 ///   - line: The line number where the failure occurs. The default is the line number where you call this function.
 public func XCTAssertNotIdenticalAsync(
-    _ expression1: @escaping @autoclosure () async throws -> AnyObject?,
-    _ expression2: @escaping @autoclosure () async throws -> AnyObject?,
-    _ message: @escaping @autoclosure () async -> String = "",
+    _ expression1: @autoclosure () async throws -> AnyObject?,
+    _ expression2: @autoclosure () async throws -> AnyObject?,
+    _ message: @autoclosure () async -> String = "",
     file: StaticString = #filePath,
     line: UInt = #line
 ) async {
@@ -412,8 +412,8 @@ public func XCTAssertNotIdenticalAsync(
 ///   - file: The file where the failure occurs. The default is the filename of the test case where you call this function.
 ///   - line: The line number where the failure occurs. The default is the line number where you call this function.
 public func XCTAssertNotNilAsync(
-    _ expression: @escaping @autoclosure () async throws -> Any?,
-    _ message: @escaping @autoclosure () async -> String = "",
+    _ expression: @autoclosure () async throws -> Any?,
+    _ message: @autoclosure () async -> String = "",
     file: StaticString = #filePath,
     line: UInt = #line
 ) async {
@@ -430,19 +430,19 @@ public func XCTAssertNotNilAsync(
 ///   - line: The line number where the failure occurs. The default is the line number where you call this function.
 ///   - errorHandler: An optional handler for errors that `expression throws.
 public func XCTAssertThrowsErrorAsync<T>(
-    _ expression: @escaping @autoclosure () async throws -> T,
-    _ message: @escaping @autoclosure () async -> String = "",
+    _ expression: @autoclosure () async throws -> T,
+    _ message: @autoclosure () async -> String = "",
     file: StaticString = #filePath,
     line: UInt = #line,
-    _ errorHandler: @escaping (_ error: any Error) -> Void = { _ in }
+    _ errorHandler: (_ error: any Error) -> Void = { _ in }
 ) async {
-    await _wrapAsync(expressions: [expression], message: message) { syncExpressions, syncMessage in
+    await _wrapAsync(expression, message: message) { syncExpression, syncMessage in
         // https://github.com/apple/swift/issues/59578
         let assert =
             XCTAssertThrowsError
             as (() throws -> T, () -> String, StaticString, UInt, (Error) -> Void) -> Void
 
-        assert(syncExpressions[0], syncMessage, file, line, errorHandler)
+        assert({ try syncExpression.get() }, { syncMessage }, file, line, errorHandler)
     }
 }
 
@@ -454,8 +454,8 @@ public func XCTAssertThrowsErrorAsync<T>(
 ///   - file: The file where the failure occurs. The default is the filename of the test case where you call this function.
 ///   - line: The line number where the failure occurs. The default is the line number where you call this function.
 public func XCTAssertTrueAsync(
-    _ expression: @escaping @autoclosure () async throws -> Bool,
-    _ message: @escaping @autoclosure () async -> String = "",
+    _ expression: @autoclosure () async throws -> Bool,
+    _ message: @autoclosure () async -> String = "",
     file: StaticString = #filePath,
     line: UInt = #line
 ) async {
@@ -468,64 +468,86 @@ public func XCTAssertTrueAsync(
     )
 }
 
-private func _wrapAsync<T>(
-    expressions: [() async throws -> T],
-    message: @escaping () async -> String,
-    closure: @escaping ([() throws -> T], () -> String) -> Void
+private func _wrapSimpleCheck<T>(
+    assertion: (() throws -> T, () -> String, StaticString, UInt) -> Void,
+    expression: () async throws -> T,
+    message: () async -> String,
+    file: StaticString,
+    line: UInt
 ) async {
-    var syncExpressions: [() throws -> T] = []
-    for expression in expressions {
-        do {
-            let result = try await expression()
-            syncExpressions.append({ result })
-        } catch {
-            syncExpressions.append({ throw error })
-        }
+    await _wrapAsync(expression, message: message) { syncExpression, syncMessage in
+        assertion({ try syncExpression.get() }, { syncMessage }, file, line)
+    }
+}
+
+private func _wrapComparisonCheck<T>(
+    assertion: (() throws -> T, () throws -> T, () -> String, StaticString, UInt) -> Void,
+    expression1: () async throws -> T,
+    expression2: () async throws -> T,
+    message: () async -> String,
+    file: StaticString,
+    line: UInt
+) async {
+    await _wrapAsync(expression1, expression2, message: message) { result1, result2, messageResult in
+        assertion({ try result1.get() }, { try result2.get() }, { messageResult }, file, line)
+    }
+}
+
+private func _wrapComparisonCheck<T>(
+    assertion: (() throws -> T, () throws -> T, T, () -> String, StaticString, UInt) ->
+        Void,
+    expression1: () async throws -> T,
+    expression2: () async throws -> T,
+    accuracy: T,
+    message: () async -> String,
+    file: StaticString,
+    line: UInt
+) async {
+    await _wrapAsync(expression1, expression2, message: message) { result1, result2, messageResult in
+        assertion({ try result1.get() }, { try result2.get() }, accuracy, { messageResult }, file, line)
+    }
+}
+
+private func _wrapAsync<T>(
+    _ expression: () async throws -> T,
+    message: () async -> String,
+    closure: (Result<T, any Error>, String) -> Void
+) async {
+    let expressionResult: Result<T, any Error>
+    do {
+        expressionResult = .success(try await expression())
+    } catch {
+        expressionResult = .failure(error)
     }
 
     let messageResult = await message()
 
-    closure(syncExpressions, { messageResult })
+    closure(expressionResult, messageResult)
 }
 
-private func _wrapSimpleCheck<T>(
-    assertion: @escaping (() throws -> T, () -> String, StaticString, UInt) -> Void,
-    expression: @escaping () async throws -> T,
-    message: @escaping () async -> String,
-    file: StaticString,
-    line: UInt
+private func _wrapAsync<T>(
+    _ expression1: () async throws -> T,
+    _ expression2: () async throws -> T,
+    message: () async -> String,
+    closure: (Result<T, any Error>, Result<T, any Error>, String) -> Void
 ) async {
-    await _wrapAsync(expressions: [expression], message: message) { syncExpressions, syncMessage in
-        assertion(syncExpressions[0], syncMessage, file, line)
+    let result1: Result<T, any Error>
+    do {
+        result1 = .success(try await expression1())
+    } catch {
+        result1 = .failure(error)
     }
+
+    let result2: Result<T, any Error>
+    do {
+        result2 = .success(try await expression2())
+    } catch {
+        result2 = .failure(error)
+    }
+
+    let messageResult = await message()
+
+    closure(result1, result2, messageResult)
 }
 
-private func _wrapComparisonCheck<T>(
-    assertion: @escaping (() throws -> T, () throws -> T, () -> String, StaticString, UInt) -> Void,
-    expression1: @escaping () async throws -> T,
-    expression2: @escaping () async throws -> T,
-    message: @escaping () async -> String,
-    file: StaticString,
-    line: UInt
-) async {
-    await _wrapAsync(expressions: [expression1, expression2], message: message) {
-        syncExpressions, syncMessage in
-        assertion(syncExpressions[0], syncExpressions[1], syncMessage, file, line)
-    }
-}
 
-private func _wrapComparisonCheck<T>(
-    assertion: @escaping (() throws -> T, () throws -> T, T, () -> String, StaticString, UInt) ->
-        Void,
-    expression1: @escaping () async throws -> T,
-    expression2: @escaping () async throws -> T,
-    accuracy: T,
-    message: @escaping () async -> String,
-    file: StaticString,
-    line: UInt
-) async {
-    await _wrapAsync(expressions: [expression1, expression2], message: message) {
-        syncExpressions, syncMessage in
-        assertion(syncExpressions[0], syncExpressions[1], accuracy, syncMessage, file, line)
-    }
-}
